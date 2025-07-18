@@ -28,7 +28,7 @@ export const CheckboxWrapper = ({ children, disabled: parentDisabled }) => {
         }
         return acc;
     }, {});
-    return (_jsx("div", { className: `checkbox-container ${checked ? 'is-enabled' : ''} ${isDisabled ? 'is-disabled' : ''}`, onClick: handleDivClick, ...ariaProps, style: {
+    return (_jsx("div", { className: `checkbox-container ${checked ? 'is-enabled' : ''} ${isDisabled ? 'is-disabled' : ''}`, onPointerDown: handleDivClick, ...ariaProps, style: {
             cursor: isDisabled ? 'not-allowed' : 'default',
             opacity: isDisabled ? 0.6 : 1,
         }, children: React.cloneElement(children, {

@@ -8,7 +8,7 @@ const OSetting = ({ name, heading, desc, className, noBorder, disabled, setupObs
     const containerRef = useRef(null);
     const obsidianSettingRef = useRef(null);
     useLayoutEffect(() => {
-        if (process.env.OSETTING_DISABLE_STYLES === 'true') {
+        if (window.OSETTING_DISABLE_STYLES === 'true') {
             return;
         }
         StyleManager.getInstance().addStyle(OSETTING_STYLES_ID, OSETTING_CSS);

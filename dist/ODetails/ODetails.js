@@ -18,6 +18,6 @@ const ODetails = ({ name, desc, defaultExpanded = false, expanded, onToggle, cla
         setInternalOpen(e.currentTarget.open);
         onToggle?.(e.currentTarget.open);
     }, [onToggle]);
-    return (_jsx("div", { className: `react-obsidian-settings-item collapsible ${className ?? ''}`, children: _jsxs("details", { open: open, onToggle: toggleHandle, children: [_jsxs("summary", { children: [name && _jsxs("div", { className: 'setting-item-name', children: [name, " "] }), desc && (_jsx("div", { className: 'setting-item-description', children: desc }))] }), _jsx("div", { className: 'collapsible-content', children: children })] }) }));
+    return (_jsx("div", { className: `osetting-item collapsible ${className ?? ''}`, children: _jsxs("details", { open: open, onToggle: toggleHandle, children: [_jsxs("summary", { children: [name && _jsxs("div", { className: 'setting-item-name', children: [name, " "] }), desc && (_jsx("div", { className: 'setting-item-description', children: desc }))] }), _jsx("div", { className: 'collapsible-content', children: children })] }) }));
 };
 export default ODetails;

@@ -34,9 +34,9 @@ const OSetting = ({ name, heading, desc, className, noBorder, disabled, setupObs
         };
     }, [setupObsidianSettingManually, name, heading, desc, className]);
     if (setupObsidianSettingManually) {
-        return (_jsx("div", { className: 'react-obsidian-settings-item', children: _jsx("div", { ref: containerRef }) }));
+        return (_jsx("div", { className: 'osetting-item', children: _jsx("div", { ref: containerRef }) }));
     }
-    return (_jsx("div", { className: `react-obsidian-settings-item ${noBorder ? 'no-border' : ''} ${className ?? ''}`, children: _jsxs("div", { className: `setting-item ${heading ? 'setting-item-heading' : ''}`, children: [_jsxs("div", { className: 'setting-item-info', children: [name && _jsx("div", { className: 'setting-item-name', children: name }), desc && (_jsx("div", { className: 'setting-item-description', children: typeof desc === 'string'
+    return (_jsx("div", { className: `osetting-item ${noBorder ? 'no-border' : ''} ${className ?? ''}`, children: _jsxs("div", { className: `setting-item ${heading ? 'setting-item-heading' : ''}`, children: [_jsxs("div", { className: 'setting-item-info', children: [name && _jsx("div", { className: 'setting-item-name', children: name }), desc && (_jsx("div", { className: 'setting-item-description', children: typeof desc === 'string'
                                 ? desc
                                 : desc.map((line, i) => (_jsx("div", { children: line }, i))) }))] }), _jsx("div", { className: 'setting-item-control', children: WrapElements(children, disabled) })] }) }));
 };
